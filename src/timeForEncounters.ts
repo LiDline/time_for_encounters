@@ -13,7 +13,7 @@ export default function timeForEncounters(busy: Busy[]) {
     ? createDate(sortedBusy[0].start)
     : createDate(END_TIME);
 
-  const resTime: Busy[] = [];
+  const resTime: Busy[] = busy.length ? [] : createTimeObject(l, r, []);
 
   for (let i = 0; i < sortedBusy.length; i++) {
     createTimeObject(l, r, resTime);

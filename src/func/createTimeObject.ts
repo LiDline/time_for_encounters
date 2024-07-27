@@ -25,4 +25,6 @@ export default function createTimeObject(
     localL += step;
     localR = localL + step;
   }
+
+  return resTime;
 }
