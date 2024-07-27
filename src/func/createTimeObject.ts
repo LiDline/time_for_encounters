@@ -3,12 +3,14 @@ import type { Busy } from '../interfaces';
 import { TIME_STEP } from '../CONST';
 
 export default function createTimeObject(
-  localL: number,
-  localR: number,
+  l: number,
   r: number,
   resTime: Busy[],
 ) {
   const step = TIME_STEP;
+
+  let localL = l;
+  let localR = l + step;
 
   while (localR <= r) {
     resTime.push({
